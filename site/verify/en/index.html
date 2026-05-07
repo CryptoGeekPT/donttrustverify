@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification — The AI-Blockchain Symbiosis</title>
+    <meta name="description" content="Public integrity record for the base version of The AI-Blockchain Symbiosis. SHA-256 hash anchored on the Bitcoin blockchain via OpenTimestamps.">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main>
+        <header class="masthead">
+            <div class="lang-switch">
+                <a href="/verify/pt/">PT</a>
+                <a href="/verify/en/" class="current">EN</a>
+            </div>
+            <h1>Verification Record</h1>
+            <p class="subtitle"><em>The AI-Blockchain Symbiosis: Verification, Power, and Autonomy in the Age of Synthetic Intelligence</em></p>
+        </header>
+
+        <h2>What this page is</h2>
+
+        <p>This page is not a showcase of the book's contents. It is a public anchor of integrity.</p>
+
+        <p>The base version of the manuscript — the exact PDF file that produced the paperback edition — was subjected to two independent cryptographic operations: the computation of its SHA-256 hash, and the anchoring of that hash on the Bitcoin blockchain via the OpenTimestamps protocol. This page publishes the artefacts of that operation so that anyone, at any time, can confirm that the manuscript has existed since a specific date (proof of anteriority) and that it has been registered with a public authority (proof of institutional registration).</p>
+
+        <p>A third proof also exists — the proof of correspondence between a specific copy and the registered version. That verification presupposes access to the base file and is therefore reserved for specific contexts: authorship disputes, audits, academic investigation, forensic examination. It is not a routine action for the general reader, but it is an action available when required.</p>
+
+        <p>The page applies to the book itself the verification architecture the book describes. It does not ask you to trust the thesis — it publishes the proofs that allow you to test it.</p>
+
+        <h2>Cryptographic proof</h2>
+
+        <div class="hash-block">
+            <span class="label">SHA-256 hash of the base version</span>
+            <span class="filename">The_AI_Blockchain_Symbiosis_EN_base_2026-04-20.pdf</span>
+            <span class="hash">4ec54921380b134ef8618a307b33f95a8ee6da836dd37fcdf0c9f4c823457858</span>
+        </div>
+
+        <dl class="metadata">
+            <dt>Canonical format:</dt><dd>paperback, 6×9″, 271 pages (base version, without the Verification Note).</dd>
+            <dt>Hashing date:</dt><dd>20 April 2026.</dd>
+            <dt>Anchoring protocol:</dt><dd>OpenTimestamps (<a href="https://opentimestamps.org">opentimestamps.org</a>).</dd>
+            <dt>Anchoring network:</dt><dd>Bitcoin mainnet.</dd>
+            <dt>Bitcoin anchoring:</dt><dd>block <a href="https://mempool.space/block/945970">945970</a>, mined on 20 April 2026 (primary anchor); redundant additional anchoring in block <a href="https://mempool.space/block/946046">946046</a>.</dd>
+            <dt>Institutional registration:</dt><dd>IGAC (Portuguese Inspectorate-General for Cultural Activities), registration n.º 610/2026, granted on 27 April 2026.</dd>
+        </dl>
+
+        <h3>Files for verification</h3>
+
+        <ul class="downloads">
+            <li><a href="/static/hash/hash_sha256_EN_base.txt" download>hash_sha256_EN_base.txt</a> — hash as plain text</li>
+            <li><a href="/static/ots/The_AI_Blockchain_Symbiosis_EN_base_2026-04-20.pdf.ots" download>The_AI_Blockchain_Symbiosis_EN_base_2026-04-20.pdf.ots</a> — OpenTimestamps proof</li>
+        </ul>
+
+        <h2>How to verify</h2>
+
+        <p>The chain of proof has three links. The first two are executable by anyone with an internet connection, and are sufficient to confirm that the manuscript existed on 20 April 2026 and has been registered with the Portuguese state. The third is executable only by those with access to the base file — in cases of authorship dispute, audit, or investigation — and is documented here for when it becomes necessary.</p>
+
+        <h3>1. Verify the Bitcoin blockchain anchor</h3>
+
+        <p>The OpenTimestamps proof (the <code>.ots</code> file) establishes that the hash existed on the Bitcoin blockchain from block 945970 onward (mined on 20 April 2026). The file contains multiple <em>attestations</em> to different Bitcoin blocks — a normal OTS practice that strengthens the proof through redundancy across independent calendars.</p>
+
+        <p>There are three paths to confirm this anchor, with increasing rigor. Choose the one that fits your context.</p>
+
+        <h4>Path A — Existence of the Bitcoin block (30 seconds, no files)</h4>
+
+        <p>Click the link to the block referenced in the proof panel above: <a href="https://mempool.space/block/945970">mempool.space/block/945970</a>. The public explorer shows that the block exists on the blockchain, was mined on 20 April 2026, and is buried under the accumulated <em>proof-of-work</em> of every Bitcoin block mined since. Altering its content retroactively would require computational capacity exceeding that of the entire Bitcoin network over the whole elapsed period, an energy cost that in practice makes the anchor immutable.</p>
+
+        <p>This path confirms that the block we reference is real. It does not, by itself, prove that the <code>.ots</code> file on this page points to that block — for that, path B.</p>
+
+        <h4>Path B — Verify the OpenTimestamps proof (2 minutes, no PDF needed)</h4>
+
+        <p>Download the <code>.ots</code> file from this page and submit it to a public verifier that processes the <code>.ots</code> alone:</p>
+
+        <ul>
+            <li><a href="https://dgi.io/ots/">dgi.io/ots/</a> — tool maintained by the <em>Digital Gold Institute</em>. Drop the file into the box and the verifier returns the Bitcoin block and date directly.</li>
+            <li>Command-line client (if you prefer): <code>pipx install opentimestamps-client</code> followed by <code>ots info file.ots</code>, which lists the Bitcoin attestations in its output.</li>
+        </ul>
+
+        <p>This verification proves that the file you hold points to block 945970. Combined with path A, it establishes that a real Bitcoin anchor exists for the manuscript's hash — without requiring the base PDF.</p>
+
+        <p>Note that <a href="https://opentimestamps.org">opentimestamps.org</a> also performs verification, but requires the original PDF in addition to the <code>.ots</code>, so it falls under path C below.</p>
+
+        <h4>Path C — Full cryptographic verification (requires access to the PDF)</h4>
+
+        <p>This path reconstructs the entire proof chain: from the PDF's SHA-256 hash, through the operation tree, up to the merkle root inside the Bitcoin block. It is executable only by those with access to the base PDF file — documented in section 3 below.</p>
+
+        <h3>2. Verify the institutional registration</h3>
+
+        <p>The IGAC (Portuguese Inspectorate-General for Cultural Activities) maintains the literary-work registration in its own archive. The cross-reference between the cryptographic anchor (proof of public anteriority, impossible to forge) and the institutional deposit (proof of formal registration with the state) makes it virtually impossible to contest the manuscript's authorship and creation date. The Portuguese edition holds registration number 596/2026, granted on 22 April 2026; the English edition holds registration number 610/2026, granted on 27 April 2026.</p>
+
+        <p>Any person can, in principle, consult the IGAC's records through the normal administrative channels. In practice, for the reader who merely wishes to confirm that the book is registered, the public reference to the registration number on this page and in the published copies is, in itself, verifiable by documentary comparison.</p>
+
+        <h3>3. Verify exact file correspondence (reserved for specific contexts)</h3>
+
+        <p>This third proof establishes that a specific PDF copy is, bit for bit, the one that was hashed and anchored. It is executable only by those with access to the base file — typically in contexts of dispute, expert examination, or formal investigation.</p>
+
+        <p>For those in such contexts, the procedure is trivial. On Linux or macOS, from the terminal:</p>
+
+        <pre>sha256sum The_AI_Blockchain_Symbiosis_EN_base_2026-04-20.pdf</pre>
+
+        <p>On Windows, from PowerShell:</p>
+
+        <pre>Get-FileHash The_AI_Blockchain_Symbiosis_EN_base_2026-04-20.pdf -Algorithm SHA256</pre>
+
+        <p>If the resulting value is identical to the one published above, the file is, bit for bit, the registered base version. If it differs by even a single character, it has been altered. Access to the base file outside these contexts is not provided by this page — the commercial edition (the published book) is a distinct editorial object, with an embedded Verification Note, which by definition produces a different hash.</p>
+
+        <h2>Scope of the proof</h2>
+
+        <p>The proof refers exclusively to the <strong>base version</strong> of the paperback — the final manuscript as it existed before the Verification Note was added to the published edition. The Verification Note in the published book cites the hash of the base version, which would make it circular to hash the published version itself.</p>
+
+        <p>The ebook and hardcover are derivatives of the same editorial manuscript and share the content of the base version. The paperback proof substantively covers all three formats.</p>
+
+        <h2>Source</h2>
+
+        <p>Tiago Pinto, author. Contact via <a href="https://x.com/cryptogeekpt">@cryptogeekpt</a>. This page is served from the author's dedicated server, in static HTML, without JavaScript, without analytics, without cookies, without external dependencies. The source code for this page will be published on GitHub for public inspection.</p>
+
+        <footer>
+            <p>Tiago Pinto · <a href="/">donttrustverify.pt</a></p>
+            <p>This page is verifiable on its own terms: served directly from the author's VPS, with no CDN, no tracking, in plain HTML. The philosophy is the project's own — don't trust, verify.</p>
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+
+# Local notes / drafts (use docs/ for committed documentation)
+notes/
+drafts/
+TODO.txt
+*.bak
+
+# Never commit the manuscript or any derivative
+*.docx
+*.pdf
+!docs/*.pdf

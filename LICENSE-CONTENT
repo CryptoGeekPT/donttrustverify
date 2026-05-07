@@ -1,0 +1,30 @@
+CC0 1.0 Universal — Public Domain Dedication
+
+The cryptographic artefacts in this repository — specifically the files under
+`site/static/hash/` (SHA-256 digests in plain text) and `site/static/ots/`
+(OpenTimestamps proofs) — are dedicated to the public domain under CC0 1.0
+Universal.
+
+These artefacts are mathematical facts derived from the manuscript files, not
+copyrightable expression. The dedication makes that explicit: anyone may copy,
+mirror, redistribute, or republish them, in any medium, for any purpose,
+without permission and without attribution.
+
+The integrity of these artefacts is independently verifiable:
+- The hashes can be recomputed from the original PDFs.
+- The OpenTimestamps proofs can be checked against the Bitcoin blockchain.
+
+Mirroring them in additional public locations strengthens the proof of
+anteriority by removing single points of failure. This is encouraged.
+
+For the full CC0 1.0 Universal text, see:
+https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+---
+
+The book's manuscript itself is NOT released under CC0. The published book
+(*A Simbiose IA-Blockchain* / *The AI-Blockchain Symbiosis*, Tiago Pinto, 2026)
+remains under standard copyright protection.
+
+This dedication applies only to the cryptographic artefacts (hashes, OTS
+proofs) — i.e., the verification metadata, not the verified content.

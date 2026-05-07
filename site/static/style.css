@@ -1,0 +1,291 @@
+/* donttrustverify.pt — verification pages
+ * Design principles: sober, typographic, verifiable.
+ * Zero external dependencies. System fonts only.
+ */
+
+:root {
+    --bg: #faf8f3;
+    --fg: #0f1c2e;
+    --fg-soft: #3a4a5f;
+    --rule: #c9c0ab;
+    --accent: #1a3558;
+    --code-bg: #efebe0;
+    --code-fg: #0b1320;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0b1320;
+        --fg: #ede6d1;
+        --fg-soft: #a8b4c4;
+        --rule: #2a3a52;
+        --accent: #d4b98a;
+        --code-bg: #0f1c2e;
+        --code-fg: #ede6d1;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 17px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+    font-feature-settings: "kern", "liga";
+    text-rendering: optimizeLegibility;
+}
+
+main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 6rem;
+}
+
+header.masthead {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+header.masthead .lang-switch {
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--fg-soft);
+    margin-bottom: 1.25rem;
+}
+
+header.masthead .lang-switch a {
+    color: var(--fg-soft);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--fg-soft);
+    margin-right: 1rem;
+}
+
+header.masthead .lang-switch a:hover,
+header.masthead .lang-switch a.current {
+    color: var(--fg);
+    border-bottom-color: var(--fg);
+}
+
+header.masthead h1 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+    font-weight: normal;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.01em;
+}
+
+header.masthead .subtitle {
+    font-style: italic;
+    color: var(--fg-soft);
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--fg);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--rule);
+}
+
+h3 {
+    font-size: 1.05rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--fg);
+}
+
+h4 {
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-top: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--fg);
+    font-style: italic;
+}
+
+p {
+    margin: 0 0 1.1rem 0;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+a:hover {
+    text-decoration-thickness: 2px;
+}
+
+/* Monospace blocks for hashes and file names */
+code, pre, .hash, .filename {
+    font-family: ui-monospace, "SF Mono", "Consolas", "Courier New", monospace;
+    font-size: 0.9rem;
+    color: var(--code-fg);
+}
+
+.hash-block {
+    background: var(--code-bg);
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.25rem;
+    margin: 1rem 0 1.5rem;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    line-height: 1.5;
+}
+
+.hash-block .label {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--fg-soft);
+    margin-bottom: 0.5rem;
+}
+
+.hash-block .filename {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    color: var(--fg-soft);
+}
+
+.hash-block .hash {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.metadata {
+    font-size: 0.9rem;
+    color: var(--fg-soft);
+    margin-top: 0.75rem;
+}
+
+.metadata dt {
+    font-weight: bold;
+    display: inline;
+}
+
+.metadata dd {
+    display: inline;
+    margin: 0 0 0 0.25rem;
+}
+
+.metadata dd::after {
+    content: "";
+    display: block;
+    height: 0.4rem;
+}
+
+ol, ul {
+    padding-left: 1.3rem;
+}
+
+ol li, ul li {
+    margin-bottom: 0.6rem;
+}
+
+ol li::marker {
+    color: var(--fg-soft);
+}
+
+.downloads {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin: 1rem 0 1.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.downloads li {
+    margin: 0;
+}
+
+.downloads a {
+    display: inline-block;
+    padding: 0.1rem 0;
+}
+
+footer {
+    margin-top: 5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85rem;
+    color: var(--fg-soft);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Landing page specifics */
+.landing-choice {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.landing-choice .lang-card {
+    padding: 1.5rem;
+    border: 1px solid var(--rule);
+    background: var(--code-bg);
+}
+
+.landing-choice .lang-card h2 {
+    margin-top: 0;
+    border: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.landing-choice .lang-card p {
+    font-size: 0.95rem;
+    color: var(--fg-soft);
+    margin-bottom: 1rem;
+}
+
+.landing-choice .lang-card a.primary {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: var(--bg);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+}
+
+.landing-choice .lang-card a.primary:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 560px) {
+    .landing-choice {
+        flex-direction: row;
+    }
+    .landing-choice .lang-card {
+        flex: 1;
+    }
+}
